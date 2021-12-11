@@ -1,10 +1,13 @@
 const button = document.querySelector('button')
 const container = document.querySelector('.container')
 
-button.addEventListener('click', function() {
+button.onclick = function () {
     container.style.visibility = 'unset'
-})
+}
 
-container.addEventListener('click', function() {
-    container.style.visibility = 'hidden'
-}) 
+document.addEventListener('keydown', function(event) {
+    const realKey = event.key === 'Escape'
+    if (realKey) {
+        container.style.visibility = 'hidden'
+    }
+})
