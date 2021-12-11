@@ -30,6 +30,7 @@ body {
 }
 
 .container {
+    visibility: hidden; /*insivible*/
     position: fixed;
     display: flex;
     background-color: rgb(110, 130, 205);
