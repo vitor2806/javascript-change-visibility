@@ -7,7 +7,9 @@ button.onclick = function () {
 
 document.addEventListener('keydown', function(event) {
     const realKey = event.key === 'Escape'
-    if (realKey) {
+    const isInvisible = container.style.visibility === 'unset'
+    
+    if (realKey && isInvisible) {
         container.style.visibility = 'hidden'
     }
 })
